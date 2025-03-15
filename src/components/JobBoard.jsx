@@ -68,7 +68,7 @@ export default function JobBoard() {
   useEffect(() => {
     const getData = async () => {
       const response = await axios.get(
-        "http://localhost:5000/api/v1/getAlljob"
+        "https://job-portal-backend-uk2v.onrender.com/api/v1/getAlljob"
       );
       setFilteredJobs(response.data.JobDetails);
       // console.log(filteredJobs);
@@ -95,7 +95,7 @@ export default function JobBoard() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/v1/getjob",
+        "https://job-portal-backend-uk2v.onrender.com/api/v1/getjob",
         Getdetails,
         { headers: { "Content-Type": "application/json" } }
       );
