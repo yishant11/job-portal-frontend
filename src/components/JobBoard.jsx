@@ -67,9 +67,8 @@ export default function JobBoard() {
  
   useEffect(() => {
     const getData = async () => {
-      const response = await axios.get(
-        "https://job-portal-backend-uk2v.onrender.com/api/v1/getAlljob"
-      );
+      console.log("yha ja rhe ho ki nhi");
+      const response = await axios.get("https://job-portal-backend-uk2v.onrender.com/api/v1/getAlljob");
       setFilteredJobs(response.data.JobDetails);
       // console.log(filteredJobs);
     };
@@ -91,7 +90,7 @@ export default function JobBoard() {
       experience: experience, // selected experience
     };
 
-    console.log("Get Details :", Getdetails);
+    // console.log("Get Details :", Getdetails);
 
     try {
       const response = await axios.post(
